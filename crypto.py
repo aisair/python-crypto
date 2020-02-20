@@ -60,11 +60,18 @@ while option_valid == 0:
         if option == "y":
             max_index = output_array[2].index(max(output_array[2]))
             for index in range(len(output_array[0])):
-                print("key: {key} | output: {green}{out}{reset} | probability: {chance}%".format(key=output_array[1][index], out=output_array[0][index], chance=output_array[2][index]*100, green=colorama.Fore.LIGHTGREEN_EX, reset=colorama.Fore.RESET))
-            print("highest probability:\nkey: {key} | output: {green}{out}{reset} | probability: {chance}%".format(key=output_array[1][max_index], out=output_array[0][max_index], chance=output_array[2][max_index]*100, green=colorama.Fore.LIGHTGREEN_EX, reset=colorama.Fore.RESET))
+                print("key: {key} | output: {green}{out}{reset} | probability: {chance}%".format(
+                    key=output_array[1][index], out=output_array[0][index], chance=output_array[2][index] * 100,
+                    green=colorama.Fore.LIGHTGREEN_EX, reset=colorama.Fore.RESET))
+            print("highest probability:\nkey: {key} | output: {green}{out}{reset} | probability: {chance}%".format(
+                key=output_array[1][max_index], out=output_array[0][max_index], chance=output_array[2][max_index] * 100,
+                green=colorama.Fore.LIGHTGREEN_EX, reset=colorama.Fore.RESET))
         else:
             for index in range(len(output_array[0])):
-                print("key: {key} | output: {green}{out}{reset}".format(key=output_array[1][index], out=output_array[0][index], green=colorama.Fore.LIGHTGREEN_EX, reset=colorama.Fore.RESET))
+                print("key: {key} | output: {green}{out}{reset}".format(key=output_array[1][index],
+                                                                        out=output_array[0][index],
+                                                                        green=colorama.Fore.LIGHTGREEN_EX,
+                                                                        reset=colorama.Fore.RESET))
     else:
         print("invalid option")
         option_valid = 0
