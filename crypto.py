@@ -23,10 +23,10 @@ def decrypt(encrypted_char, encrypt_key):
 
 colorama.init()
 input_string = input("input string/message: ")
-option = input("encrypt or decrypt (e for encrypt, d for decrypt): ").lower()
 option_valid = 0
 while option_valid == 0:
     option_valid = 1
+    option = input("encrypt or decrypt (e for encrypt, d for decrypt): ").lower()
     if option == "e":
         key = 0
         key_valid = 0
